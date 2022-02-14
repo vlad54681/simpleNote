@@ -26,7 +26,6 @@ const App = ({ setUpdatesPosts,
 	let deleteCurrentTag = (tagId) => {
 
 		if (editMode == 2) {
-			console.log(holdingTags)
 
 			let finalTags = holdingTags.filter(tag => tag.id != tagId)
 			setHoldingTags(finalTags)
@@ -82,7 +81,6 @@ const App = ({ setUpdatesPosts,
 						: Math.max.apply(null, allvalues),
 				}]
 			setHoldingTags(HoldingTagsCopy)
-			console.log(holdingTags)
 		} else {
 
 			let allvalues = Object.keys(localCurrentPost.tags).map(tag => localCurrentPost.tags[tag].id + 1);
@@ -159,7 +157,6 @@ const App = ({ setUpdatesPosts,
 	}
 
 	let mirrorTags = (str) => {
-		console.log('вызвался mirrorTags');
 		let tags = []
 		if (str) {
 

@@ -17,7 +17,6 @@ const DemonstrateForm = ({ setEditMode, deletePost,
 		let text = textInput.current.innerHTML;
 		let arr = text.split(' ')
 		let newArr = []
-		console.log('1');
 		for (let word of arr) {
 			if (tags.find(tag => tag.name === word)) {
 				newArr.push('<span style="background: rgba(252, 255, 62, 0.7); border-radius: 5px">' + word + '</span>')
